@@ -9,8 +9,9 @@ if (!window.requestAnimationFrame) {
         window.setTimeout(callback, 1000 / 60);
       };
    }
-   // Make sure we can use the best possible 'timer' for our gameloop
-   if ('performance' in window == false) {
+   
+// Make sure we can use the best possible 'timer' for our gameloop
+if ('performance' in window == false) {
     window.performance = {};
    }
    Date.now =
