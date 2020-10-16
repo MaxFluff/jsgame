@@ -20,7 +20,7 @@ class Road {
       Road.addStraight();
       Road.addSCurves();
       Road.addStraight();
-      Road.addHill(ROAD.LENGTH.LONG, ROAD.HILL.MEDIUM);
+      Road.addHill(ROAD.LENGTH.LONG, ROAD.HILL.MEDIUM); 
       Road.addLowRollingHills();
       Road.addBumps();
       Road.addDownhillToEnd();
