@@ -128,7 +128,7 @@ window.addEventListener(
             
     }else if(keyRight) {
         if(speed > 0) {
-            playerX = dx;
+            playerX += dx;
             if(hangTimer >= hangDelay) {
                 hangTimer = 0;
                 hang += 2;
@@ -153,7 +153,7 @@ window.addEventListener(
             speed = Util.accelerate(speed, breaking, dt);
             brake = 14;
         }else if (keyFaster) {
-            speed = Util.accelerate(speed, eccel, dt);
+            speed = Util.accelerate(speed, accel, dt);
             brake = 0;
         }else{
             speed = Util.accelerate(speed, decel, dt);
