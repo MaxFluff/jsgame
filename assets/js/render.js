@@ -86,6 +86,11 @@ class Render {
         Render.sprite(ctx, width, height, resolution, roadWidth, sprites, sprite, scale, destX, destY, -0.5, -1.04);
       }
 
+      static speedometer(ctx, width, height, resolution, roadWidth, sprites, speedPercent, scale, destX, destY) {
+        let sprite = SPRITES.METER;
+        Render.sprite(ctx, width, height, resolution, roadWidth, sprites, sprite, scale, destX, destY, -1.04, -1.04);
+       }
 
+       
    }
 

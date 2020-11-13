@@ -12,8 +12,8 @@ const COLORS = {
   SKY: '#72D7EE',
   TREE: '#005108',
   FOG: '#669999',
-  LIGHT: { road: '#6B6B6B', grass: '#10AA10', rumble: '#555555', lane: '#CCCCCC' },
-  DARK: { road: '#696969', grass: '#009A00', rumble: '#BBBBBB' },
+  LIGHT: { road: '#6B6B6B', grass: '#10AA10', rumble: '#FF0000', lane: '#F0F0F0' },
+  DARK: { road: '#696969', grass: '#009A00', rumble: '#FFFFFF' },
   START: { road: 'white', grass: 'white', rumble: 'white' },
   FINISH: { road: 'black', grass: 'black', rumble: 'black' },
 };
@@ -89,5 +89,6 @@ const SPRITES = {
   LAMPPOST: { x: 365, y: 1, w: 35, h: 198 }, // lamppost on the leftside
   LAMPPOST_MIRRORED: { x: 400, y: 1, w: 35, h: 198 }, // lamppost on the rightside (mirrored)
   TREE: { x: 365, y: 201, w: 38, h: 122 }, // tree
+  METER: { x:459, y:225, w:140, h:122 },// speedometer
 };
 SPRITES.SCALE = 0.1 * (1 / SPRITES.BIKE[6].w);

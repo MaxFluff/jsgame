@@ -49,6 +49,7 @@ let hang = 0;
 let hangDelay = 50;
 let hangTimer = 0;
 let bikeSpriteSelector = 6;
+let displayspeed = "";
 
 window.addEventListener(
     'load',
@@ -168,6 +169,8 @@ window.addEventListener(
         speed = Util.limit(speed, 0, maxSpeed);
         tire = Util.toInt(position / 500) % 2;
 
+        displayspeed = Math.round(speed / 50);
+
         bikeSpriteSelector = 6 + tire + hang + brake;
     };
 
@@ -189,7 +192,9 @@ window.addEventListener(
     Render.background(ctx, background, width, height, BACKGROUND.WOODS, woodsOffset, resolution * woodsSpeed * playerY);
     
     let n, i, segment, car, sprite, spriteScale, spriteX, spriteY;
-    
+    // ctx.fillStyle = "white";
+    // ctx.fillText(displayspeed, 475, 250);
+
     for (n = 0; n < drawDistance; n++) {
      segment = segments[(baseSegment.index + n) % segments.length];
      segment.looped = segment.index < baseSegment.index;
@@ -223,5 +228,7 @@ window.addEventListener(
         }
     }
 
-
+    Render.speedometer(ctx, width, height, resolution, roadWidth, sprites, 0, 0.0005208333333333333, width, height);
+    ctx.fillStyle = "#FF0078";
+    ctx.fillText(displayspeed, 530, 460);
    };
